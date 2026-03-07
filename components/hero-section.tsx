@@ -1,111 +1,120 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { CalendarDays, MapPin, ArrowRight, Download } from "lucide-react"
+import { Calendar, MapPin, Send, Download } from "lucide-react"
 
-function ScientificPattern() {
+export default function HeroSection() {
+
   return (
-    <svg
-      className="absolute inset-0 h-full w-full opacity-[0.07]"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <defs>
-        <pattern id="hex" width="60" height="52" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
-          <path
-            d="M30 0 L60 15 L60 37 L30 52 L0 37 L0 15 Z"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="0.5"
-          />
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#hex)" />
-    </svg>
-  )
-}
+    <section className="relative pt-40 pb-24 px-6 flex flex-col items-center text-center bg-gradient-to-b from-[#0c2b63] via-[#0e3475] to-[#123e8a] overflow-hidden">
 
-export function HeroSection() {
-  return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-primary text-primary-foreground">
-      <ScientificPattern />
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(30,136,229,0.15),_transparent_70%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(30,136,229,0.1),_transparent_60%)]" />
+      {/* Background Glow */}
+      <div className="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] bg-blue-500/20 blur-[140px] rounded-full" />
+      <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-indigo-500/20 blur-[140px] rounded-full" />
 
-      <div className="relative z-10 mx-auto max-w-5xl px-4 py-32 text-center lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Badge */}
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-5 py-2 text-sm font-medium backdrop-blur-sm">
-            <CalendarDays className="h-4 w-4" />
-            <span>16 - 17 March 2026</span>
-          </div>
+      {/* Hex Pattern */}
+      <div
+        className="absolute inset-0 opacity-15"
+        style={{
+          backgroundImage:
+            "url('https://www.transparenttextures.com/patterns/hexellence.png')",
+        }}
+      />
 
-          {/* Conference name */}
-          <h1 className="mb-4 text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl">
-            <span className="text-balance">FABCON 2026</span>
-          </h1>
+      {/* Date Badge */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="flex items-center gap-2 bg-white/20 backdrop-blur-md px-6 py-2 rounded-full text-white text-sm mb-10 shadow-lg"
+      >
+        <Calendar size={16} />
+        16 – 17 March 2026
+      </motion.div>
 
-          <p className="mx-auto mb-6 max-w-3xl text-balance text-lg leading-relaxed text-primary-foreground/80 md:text-xl lg:text-2xl">
-            National Symposium on the Confluence of Food, Biotechnology & Automation
-          </p>
 
-          <p className="mb-4 text-sm font-medium uppercase tracking-widest text-primary-foreground/60">
-            Organized by
-          </p>
-          <p className="mx-auto mb-2 max-w-2xl text-pretty text-base text-primary-foreground/80 md:text-lg">
-            Department of Food Engineering & Technology
-          </p>
-          <p className="mx-auto mb-8 max-w-2xl text-pretty text-sm text-primary-foreground/60">
-            Central Institute of Technology Kokrajhar (Deemed to be University)
-            <br />
-            Ministry of Education, Government of India
-          </p>
+      {/* FABCON LOGO */}
+      <motion.img
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.7 }}
+        whileHover={{ scale: 1.05 }}
+        src="/fabcon-logo.jpeg"
+        alt="FABCON Logo"
+        className="w-40 h-40 object-contain mb-10 drop-shadow-xl"
+      />
 
-          {/* Venue */}
-          <div className="mb-10 inline-flex items-center gap-2 text-sm text-primary-foreground/70">
-            <MapPin className="h-4 w-4" />
-            <span>BKB Seminar Hall, CIT Kokrajhar, Assam, India</span>
-          </div>
-        </motion.div>
 
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex flex-col items-center justify-center gap-4 sm:flex-row"
-        >
-          <a
-            href="#registration"
-            className="group inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-3.5 text-base font-semibold text-accent-foreground transition-all hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/25"
-          >
-            Submit Abstract
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-          </a>
-          <a
-            href="#"
-            className="group inline-flex items-center gap-2 rounded-lg border border-primary-foreground/30 bg-primary-foreground/5 px-8 py-3.5 text-base font-semibold text-primary-foreground backdrop-blur-sm transition-all hover:border-primary-foreground/50 hover:bg-primary-foreground/10"
-          >
-            <Download className="h-4 w-4" />
-            Download Brochure
-          </a>
-        </motion.div>
+      {/* Title */}
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight"
+      >
+        FABCON <span className="text-blue-300">2026</span>
+      </motion.h1>
+
+      <p className="text-lg md:text-xl text-gray-200 mb-4 max-w-2xl">
+        National Symposium on the Confluence of
+      </p>
+
+      <p className="text-xl md:text-2xl font-semibold text-blue-200 mb-10">
+        Food • Biotechnology • Automation
+      </p>
+
+
+      {/* Organized By */}
+      <motion.div
+        initial={{ opacity: 0, y: 25 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+        className="text-gray-200 mb-6"
+      >
+        <p className="uppercase tracking-widest text-sm mb-2 text-blue-200">
+          Organized By
+        </p>
+
+        <p className="text-lg font-medium">
+          Department of Food Engineering & Technology
+        </p>
+
+        <p className="text-gray-300 text-sm">
+          Central Institute of Technology Kokrajhar (Deemed to be University)
+        </p>
+
+        <p className="text-gray-300 text-sm">
+          Ministry of Education, Government of India
+        </p>
+      </motion.div>
+
+
+      {/* Venue */}
+      <div className="flex items-center gap-2 text-gray-300 mb-12">
+        <MapPin size={16} />
+        BKB Seminar Hall, CIT Kokrajhar, Assam, India
       </div>
 
-      {/* Bottom wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" aria-hidden="true">
-          <path
-            d="M0 40 C360 80 720 0 1080 40 C1260 60 1380 50 1440 40 V80 H0 Z"
-            className="fill-background"
-          />
-        </svg>
-      </div>
+{/* CTA Button */}
+<div className="flex flex-col sm:flex-row gap-5">
+
+  {/* Download Brochure */}
+  <motion.a
+    href="/FABCON_Brochure.pdf"
+    download
+    whileHover={{ scale: 1.06 }}
+    whileTap={{ scale: 0.96 }}
+    className="group flex items-center justify-center gap-3 px-9 py-4 rounded-xl border border-white/40 text-white font-semibold backdrop-blur hover:bg-white/10 transition"
+  >
+    Download Brochure
+    <Download
+      size={18}
+      className="transition-transform group-hover:translate-y-1"
+    />
+  </motion.a>
+
+</div>
+
     </section>
   )
 }

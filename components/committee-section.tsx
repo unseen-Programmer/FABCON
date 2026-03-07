@@ -2,11 +2,9 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { GraduationCap, ShieldCheck, User } from "lucide-react"
+import { GraduationCap, ShieldCheck, User, Users } from "lucide-react"
 
-/* -------------------------------- */
-/* Scroll Animation */
-/* -------------------------------- */
+/* ---------------- Scroll Animation ---------------- */
 
 function AnimatedScroll({
   children,
@@ -31,9 +29,7 @@ function AnimatedScroll({
   )
 }
 
-/* -------------------------------- */
-/* Leadership Card */
-/* -------------------------------- */
+/* ---------------- Leadership Card ---------------- */
 
 function PrincipalMemberCard({
   name,
@@ -64,13 +60,12 @@ function PrincipalMemberCard({
       <p className="text-sm text-slate-500 mt-2 max-w-[220px]">
         {affiliation}
       </p>
+
     </div>
   )
 }
 
-/* -------------------------------- */
-/* Committee List */
-/* -------------------------------- */
+/* ---------------- Committee List ---------------- */
 
 function CommitteeList({
   title,
@@ -82,10 +77,10 @@ function CommitteeList({
   icon: any
 }) {
   return (
-    <div className="mt-24">
+    <div className="mt-20">
 
-      <div className="flex items-center gap-3 mb-10">
-        <Icon className="text-sky-600" size={26} />
+      <div className="flex items-center gap-3 mb-8">
+        <Icon className="text-sky-600" size={24} />
         <h3 className="text-2xl font-bold text-slate-900">{title}</h3>
       </div>
 
@@ -128,18 +123,13 @@ function CommitteeList({
   )
 }
 
-/* -------------------------------- */
-/* Main Section */
-/* -------------------------------- */
+/* ---------------- Main Section ---------------- */
 
 export function CommitteeSection() {
 
   return (
 
-    <section
-      id="committee"
-      className="bg-slate-50 py-24"
-    >
+    <section id="committee" className="bg-slate-50 py-24">
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
@@ -235,21 +225,21 @@ export function CommitteeSection() {
           members={[
             { name: "Prof. S C Deka", uni: "Tezpur University", image: "/Prof. S C Deka.jpg" },
             { name: "Prof. Vimal Katiyar", uni: "IIT Guwahati", image: "/Prof. Vimal Katiyar.jpg" },
-            { name: "Prof. N Sivakumaran", uni: "NIT Trichy", image: "/Sivakumaran.jpeg"  },
-            { name: "Prof. R C Pradhan", uni: "NIT Rourkela" , image: "/Prof. R C Pradhan.jpg" },
-            { name: "Prof. S Senthil Kumar", uni: "IIT Guwahati" , image: "/Prof. S Senthil Kumar.jpg"},
+            { name: "Prof. N Sivakumaran", uni: "NIT Trichy", image: "/Sivakumaran.jpeg" },
+            { name: "Prof. R C Pradhan", uni: "NIT Rourkela", image: "/Prof. R C Pradhan.jpg" },
+            { name: "Prof. S Senthil Kumar", uni: "IIT Guwahati", image: "/Prof. S Senthil Kumar.jpg" },
           ]}
         />
 
 
-        {/* Student Convener */}
+        {/* ---------------- STUDENT CONVENER ---------------- */}
 
-        <div className="mt-24 flex justify-center">
+        <div className="mt-24 flex">
 
           <div className="flex items-center gap-5 px-8 py-5 rounded-xl border border-slate-200 bg-white shadow-sm">
 
             <img
-              src="Pratyush Saikia.png"
+              src="/Pratyush Saikia.png"
               alt="Pratyush Saikia"
               className="w-16 h-16 rounded-full object-cover"
             />
@@ -264,17 +254,50 @@ export function CommitteeSection() {
                 Mr. Pratyush Saikia
               </p>
 
-              <p className="text-sm text-slate-500">
+              {/* <p className="text-sm text-slate-500">
                 Phone: 7005573168
-              </p>
+              </p> */}
 
             </div>
 
-            <User className="text-sky-600" size={22} />
+            {/* <User className="text-sky-600" size={22} /> */}
 
           </div>
 
         </div>
+
+
+        {/* ---------------- STUDENT COORDINATORS ---------------- */}
+
+        <CommitteeList
+          title="Student Coordinators"
+          icon={User}
+          members={[
+            { name: "Mr Jwangshar Boro", image: "/MB.jpeg" },
+
+          ]}
+        />
+
+
+        {/* ---------------- STUDENT COMMITTEE ---------------- */}
+
+        <CommitteeList
+          title="Student Committee Members"
+          icon={Users}
+          members={[
+            { name: "Manisha Hazarika", image: "Manisha Hazarika.jpeg" },
+
+            { name: "Minijuli Basumatary", image: "Minijuli Basumatary.jpeg" },
+            { name: "Tangkhima Basumatary", image: "/Tangkhima Basumatary.jpeg" },
+            { name: "Ringkhang Brahma", image: "/Ringkhang Brahma.jpeg" },
+            { name: "Phami Basumatary", image: "/Phami Basumatary.jpeg" },
+            { name: "Bhuyashi Boruah", image: "/Bhuyashi Boruah.jpeg" },
+            { name: "Zircon Basumatary", image: "/Zircon Basumatary.jpeg" },
+            { name: "Samudra Brahma", image: "/Samudra Brahma.jpeg" },
+            { name: "Rangina Brahma", image: "/Rangina Brahma.jpeg" },
+            { name: "Khwmthagwra Narzary", image: "/Khwmthagwra Narzary.jpeg" },
+          ]}
+        />
 
       </div>
 

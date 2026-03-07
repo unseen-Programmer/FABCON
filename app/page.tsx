@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/navbar"
-import { HeroSection } from "@/components/hero-section"
+import HeroSection from "@/components/hero-section"
 import Countdown from "@/components/Countdown"
 import { AboutSection } from "@/components/about-section"
 import { ThemesSection } from "@/components/themes-section"
@@ -21,22 +21,22 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Countdown to Event */}
+      {/* Countdown */}
       <Countdown />
 
-      {/* About FABCON */}
+      {/* About */}
       <AboutSection />
 
-      {/* Conference Themes */}
+      {/* Themes */}
       <ThemesSection />
 
-      {/* Important Dates */}
+      {/* Dates */}
       <ImportantDatesSection />
 
       {/* Speakers */}
       <SpeakersSection />
 
-      {/* Organizing Committee */}
+      {/* Committee */}
       <CommitteeSection />
 
       {/* Registration */}

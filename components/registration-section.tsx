@@ -2,9 +2,24 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { GraduationCap, BookOpen, BriefcaseBusiness, Factory, ArrowRight, Check } from "lucide-react"
+import {
+  GraduationCap,
+  BookOpen,
+  BriefcaseBusiness,
+  Factory,
+  ArrowRight,
+  Check,
+} from "lucide-react"
 
-function AnimatedSection({ children, className }: { children: React.ReactNode; className?: string }) {
+/* Animation wrapper */
+
+function AnimatedSection({
+  children,
+  className,
+}: {
+  children: React.ReactNode
+  className?: string
+}) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -12,7 +27,7 @@ function AnimatedSection({ children, className }: { children: React.ReactNode; c
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 40 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7 }}
       className={className}
     >
@@ -20,6 +35,8 @@ function AnimatedSection({ children, className }: { children: React.ReactNode; c
     </motion.div>
   )
 }
+
+/* Categories */
 
 const categories = [
   {
@@ -70,11 +87,13 @@ export function RegistrationSection() {
 
   return (
     <section id="registration" className="bg-secondary py-20 lg:py-28">
+
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
 
-        {/* Section Header */}
+        {/* Header */}
 
         <AnimatedSection>
+
           <div className="mb-4 text-center">
             <span className="text-sm font-semibold uppercase tracking-widest text-accent">
               Join Us
@@ -88,17 +107,21 @@ export function RegistrationSection() {
           <p className="mx-auto mb-16 max-w-2xl text-center text-base leading-relaxed text-muted-foreground">
             Register for FABCON 2026 and be part of an enriching academic experience in food science and technology.
           </p>
+
         </AnimatedSection>
 
-        {/* Registration Cards */}
+        {/* Cards */}
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 
           {categories.map((cat, index) => (
+
             <AnimatedSection key={cat.title}>
+
               <motion.div
-                transition={{ delay: index * 0.1 }}
-                className="group flex h-full flex-col rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/30 hover:shadow-lg"
+                whileHover={{ y: -6 }}
+                transition={{ delay: index * 0.08 }}
+                className="group flex h-full flex-col rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/30 hover:shadow-xl"
               >
 
                 {/* Icon */}
@@ -116,15 +139,22 @@ export function RegistrationSection() {
                 {/* Features */}
 
                 <ul className="mb-6 flex flex-1 flex-col gap-2.5">
+
                   {cat.features.map((feat) => (
+
                     <li
                       key={feat}
                       className="flex items-start gap-2 text-sm text-muted-foreground"
                     >
+
                       <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+
                       <span>{feat}</span>
+
                     </li>
+
                   ))}
+
                 </ul>
 
                 {/* Button */}
@@ -133,25 +163,28 @@ export function RegistrationSection() {
                   href={formLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90"
+                  className="mt-auto inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:gap-3"
                 >
                   Register Now
-                  <ArrowRight className="h-4 w-4" />
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
 
               </motion.div>
+
             </AnimatedSection>
+
           ))}
 
         </div>
 
-        {/* Note */}
+        {/* Footer note */}
 
         <p className="mt-12 text-center text-sm text-muted-foreground">
           Registration will be completed through the official Google Form.
         </p>
 
       </div>
+
     </section>
   )
 }
