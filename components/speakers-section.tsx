@@ -50,14 +50,14 @@ const speakers = [
     image: "/Dr. Kona.jpg",
     link: "https://ubkv.ac.in/Faculty_of_Technology/faculty.html",
   },
-  {
-    name: "Dr. Sabyasachi Mishra",
-    role: "Associate Professor",
-    affiliation: "National Institute of Technology Rourkela",
-    talk: "Emerging Trends in Food Engineering Research",
-    image: "/Sabyasachi Mishra.jpg",
-    link: "https://www.nitrkl.ac.in/FP/~mishrasa/",
-  },
+ {
+  name: "Dr. Sabyasachi Mishra",
+  role: "Professor & Head of the Department (HOD)",
+  affiliation: "National Institute of Technology Rourkela",
+  talk: "Emerging Trends in Food Engineering Research",
+  image: "/Sabyasachi Mishra.jpg",
+  link: "https://www.nitrkl.ac.in/FP/~mishrasa/",
+},
 ]
 
 export function SpeakersSection() {
