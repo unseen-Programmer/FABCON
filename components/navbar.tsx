@@ -40,31 +40,25 @@ export function Navbar() {
 
           {/* LEFT LOGOS */}
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
 
-            <div className="h-9 flex items-center">
-              <img
-                src="/btc gov.webp"
-                alt="BTC Government"
-                className="h-full w-auto object-contain"
-              />
-            </div>
+            <img
+              src="/btc gov.webp"
+              alt="BTC Government"
+              className="h-8 w-auto object-contain"
+            />
 
-            <div className="h-9 flex items-center">
-              <img
-                src="/cit kok logo.jpg"
-                alt="CIT Kokrajhar"
-                className="h-full w-auto object-contain"
-              />
-            </div>
+            <img
+              src="/cit kok logo.jpg"
+              alt="CIT Kokrajhar"
+              className="h-8 w-auto object-contain"
+            />
 
-            <div className="h-9 flex items-center">
-              <img
-                src="/NRF logo.webp"
-                alt="NRF"
-                className="h-full w-auto object-contain"
-              />
-            </div>
+            <img
+              src="/NRF logo.webp"
+              alt="NRF"
+              className="h-8 w-auto object-contain"
+            />
 
           </div>
 
@@ -73,18 +67,16 @@ export function Navbar() {
 
           <div className="flex items-center gap-2">
 
-            <div className="h-9 flex items-center">
-              <img
-                src="/fabcon-logo.jpeg"
-                alt="FABCON logo"
-                className="h-full w-auto object-contain scale-110"
-              />
-            </div>
+            <img
+              src="/fabcon-logo.jpeg"
+              alt="FABCON logo"
+              className="h-9 w-auto object-contain"
+            />
 
-            <div className="leading-tight hidden sm:block">
+            <div className="leading-tight">
 
               <h1
-                className={`text-base md:text-lg font-semibold ${
+                className={`text-sm md:text-lg font-semibold ${
                   scrolled ? "text-gray-900" : "text-white"
                 }`}
               >
@@ -92,7 +84,7 @@ export function Navbar() {
               </h1>
 
               <p
-                className={`text-xs ${
+                className={`text-[10px] md:text-xs ${
                   scrolled ? "text-gray-500" : "text-blue-100"
                 }`}
               >

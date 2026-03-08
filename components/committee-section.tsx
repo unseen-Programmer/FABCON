@@ -164,20 +164,6 @@ export function CommitteeSection() {
           />
 
           <PrincipalMemberCard
-            name="Prof. Avik Mukherjee"
-            role="Conference Chair"
-            affiliation="Dean (Students Affairs), CIT Kokrajhar"
-            image="/Prof. Avik Mukherjee.jpg"
-          />
-
-          <PrincipalMemberCard
-            name="Prof. Subhajit Ray"
-            role="Conference Chair"
-            affiliation="Dean (Academic Affairs), CIT Kokrajhar"
-            image="/Prof. Subhajit Ray.jpg"
-          />
-
-          <PrincipalMemberCard
             name="Dr. Prakash Kumar Nayak"
             role="Convenor"
             affiliation="Head, Department of Food Engineering & Technology"
@@ -196,6 +182,20 @@ export function CommitteeSection() {
             role="Organizing Secretary"
             affiliation="Assistant Professor, Food Engineering & Technology"
             image="/Dr. Radhakrishnan K.jpg"
+          />
+
+          <PrincipalMemberCard
+            name="Prof. Avik Mukherjee"
+            role="Conference Chair"
+            affiliation="Dean (Students Affairs), CIT Kokrajhar"
+            image="/Prof. Avik Mukherjee.jpg"
+          />
+
+          <PrincipalMemberCard
+            name="Prof. Subhajit Ray"
+            role="Conference Chair"
+            affiliation="Dean (Academic Affairs), CIT Kokrajhar"
+            image="/Prof. Subhajit Ray.jpg"
           />
 
         </div>
@@ -232,62 +232,36 @@ export function CommitteeSection() {
         />
 
 
-        {/* ---------------- STUDENT CONVENER ---------------- */}
+        {/* Student Convener */}
 
-        <div className="mt-24 flex">
-
-          <div className="flex items-center gap-5 px-8 py-5 rounded-xl border border-slate-200 bg-white shadow-sm">
-
-            <img
-              src="/Pratyush Saikia.png"
-              alt="Pratyush Saikia"
-              className="w-16 h-16 rounded-full object-cover"
-            />
-
-            <div>
-
-              <p className="text-sm font-semibold text-sky-600 uppercase">
-                Student Convener
-              </p>
-
-              <p className="text-lg font-bold text-slate-900">
-                Mr. Pratyush Saikia
-              </p>
-
-              {/* <p className="text-sm text-slate-500">
-                Phone: 7005573168
-              </p> */}
-
-            </div>
-
-            {/* <User className="text-sky-600" size={22} /> */}
-
-          </div>
-
-        </div>
+        <CommitteeList
+          title="Student Convener"
+          icon={User}
+          members={[
+            { name: "Mr. Pratyush Saikia", image: "/Pratyush Saikia.png" },
+          ]}
+        />
 
 
-        {/* ---------------- STUDENT COORDINATORS ---------------- */}
+        {/* Student Coordinators */}
 
         <CommitteeList
           title="Student Coordinators"
           icon={User}
           members={[
             { name: "Mr Jwangshar Boro", image: "/MB.jpeg" },
-
           ]}
         />
 
 
-        {/* ---------------- STUDENT COMMITTEE ---------------- */}
+        {/* Student Committee */}
 
         <CommitteeList
           title="Student Committee Members"
           icon={Users}
           members={[
-            { name: "Manisha Hazarika", image: "Manisha Hazarika.jpeg" },
-
-            { name: "Minijuli Basumatary", image: "Minijuli Basumatary.jpeg" },
+            { name: "Manisha Hazarika", image: "/Manisha Hazarika.jpeg" },
+            { name: "Minijuli Basumatary", image: "/Minijuli Basumatary.jpeg" },
             { name: "Tangkhima Basumatary", image: "/Tangkhima Basumatary.jpeg" },
             { name: "Ringkhang Brahma", image: "/Ringkhang Brahma.jpeg" },
             { name: "Phami Basumatary", image: "/Phami Basumatary.jpeg" },
