@@ -64,6 +64,7 @@ const speakers = [
   name: "Dr. Sudhansu Shekhar Mahanand",
   role: "Associate Professor",
   affiliation: "Central Agriculture University, Imphal",
+  talk: " Aquaculture Engineering, Fish Processing Technology, Food Science",
   image: "/Sudhansu-Mahanand.webp",
   link: "https://scholar.google.com/citations?user=CCp1AWwAAAAJ&hl=en",
 },
