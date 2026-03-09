@@ -43,7 +43,7 @@ const speakers = [
     link: "https://www.gkciet.ac.in/faculty/13",
   },
   {
-    name: "Er. Himadri Shekhar Konar",
+    name: "Dr. Himadri Shekhar Konar",
     role: "Assistant Professor",
     affiliation: "Faculty of Technology, UBKV, Cooch Behar",
     talk: "Food Processing Innovations and Sustainable Systems",
@@ -58,6 +58,16 @@ const speakers = [
   image: "/Sabyasachi Mishra.jpg",
   link: "https://www.nitrkl.ac.in/FP/~mishrasa/",
 },
+
+
+ {
+  name: "Dr. Sudhansu Shekhar Mahanand",
+  role: "Associate Professor",
+  affiliation: "Central Agriculture University, Imphal",
+  image: "/Sudhansu-Mahanand.webp",
+  link: "https://scholar.google.com/citations?user=CCp1AWwAAAAJ&hl=en",
+},
+
 ]
 
 export function SpeakersSection() {
