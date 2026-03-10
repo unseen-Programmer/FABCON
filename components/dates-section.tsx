@@ -31,13 +31,13 @@ const dates = [
   {
     icon: FileText,
     label: "Abstract Submission Deadline",
-    date: "10 March 2026",
+    date: "12 March 2026",
     status: "upcoming" as const,
   },
   {
     icon: Bell,
     label: "Notification of Acceptance",
-    date: "11 March 2026",
+    date: "13 March 2026",
     status: "upcoming" as const,
   },
   {
