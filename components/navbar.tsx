@@ -55,7 +55,7 @@ export function Navbar() {
             />
 
             <img
-              src="/NRF logo.webp"
+              src="/newlog.jpeg"
               alt="NRF"
               className="h-8 w-auto object-contain"
             />
