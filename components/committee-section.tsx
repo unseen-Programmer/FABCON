@@ -178,7 +178,7 @@ export function CommitteeSection() {
           />
 
           <PrincipalMemberCard
-            name="Dr. Radhakrishnan K"
+            name="Dr. Radha krishnan K"
             role="Organizing Secretary"
             affiliation="Assistant Professor, Food Engineering & Technology"
             image="/Dr. Radhakrishnan K.jpg"
