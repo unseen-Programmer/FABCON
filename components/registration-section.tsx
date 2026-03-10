@@ -83,7 +83,7 @@ const categories = [
 
 export function RegistrationSection() {
   const formLink =
-    "https://docs.google.com/forms/d/e/1FAIpQLScjegjmzW9Rln1RPbxjW_5bUpFR-dcglIkrJ9YOWkd5vCGcQA/viewform"
+    "https://forms.gle/rHrXakLP2mjBiSeg8"
 
   return (
     <section id="registration" className="bg-secondary py-20 lg:py-28">
