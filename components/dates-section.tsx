@@ -31,7 +31,7 @@ const dates = [
   {
     icon: FileText,
     label: "Abstract Submission Deadline",
-    date: "12 March 2026",
+    date: "13 March 2026",
     status: "upcoming" as const,
   },
   {
@@ -70,13 +70,22 @@ export function ImportantDatesSection() {
             Important Dates
           </h2>
 
-          <p className="mx-auto mb-16 max-w-2xl text-center text-base leading-relaxed text-muted-foreground">
+          <p className="mx-auto mb-10 max-w-2xl text-center text-base leading-relaxed text-muted-foreground">
             Stay updated with the key milestones for FABCON 2026.
           </p>
         </AnimatedSection>
 
-        <div className="mx-auto max-w-3xl">
+        {/* 🔴 Deadline Extension Announcement Banner */}
+        <AnimatedSection>
+          <div className="mx-auto mb-12 max-w-3xl rounded-xl border border-red-200 bg-red-50 px-6 py-4 text-center shadow-sm">
+            <p className="text-sm font-semibold text-red-600">
+              📢 Abstract Submission Deadline Extended till{" "}
+              <span className="font-bold">13 March 2026</span>
+            </p>
+          </div>
+        </AnimatedSection>
 
+        <div className="mx-auto max-w-3xl">
           <div className="relative">
 
             {/* Timeline line */}
