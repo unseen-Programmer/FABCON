@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { ExternalLink } from "lucide-react" // Ensure lucide-react is installed
+import { ExternalLink } from "lucide-react"
 
 function AnimatedSection({
   children,
@@ -42,6 +42,7 @@ const speakers = [
     image: "/Dr. Kshirod Kumar Dash..JPG",
     link: "https://www.gkciet.ac.in/faculty/13",
   },
+
   {
     name: "Dr. Himadri Shekhar Konar",
     role: "Assistant Professor",
@@ -50,50 +51,96 @@ const speakers = [
     image: "/Dr. Kona.jpg",
     link: "https://ubkv.ac.in/Faculty_of_Technology/faculty.html",
   },
- {
-  name: "Dr. Sabyasachi Mishra",
-  role: "Professor & Head of the Department (HOD)",
-  affiliation: "National Institute of Technology Rourkela",
-  talk: "Emerging Trends in Food Engineering Research",
-  image: "/Sabyasachi Mishra.jpg",
-  link: "https://www.nitrkl.ac.in/FP/~mishrasa/",
-},
 
+  {
+    name: "Dr. Sabyasachi Mishra",
+    role: "Professor & Head of the Department (HOD)",
+    affiliation: "National Institute of Technology Rourkela",
+    talk: "Emerging Trends in Food Engineering Research",
+    image: "/Sabyasachi Mishra.jpg",
+    link: "https://www.nitrkl.ac.in/FP/~mishrasa/",
+  },
 
- {
-  name: "Dr. Sudhansu Shekhar Mahanand",
-  role: "Associate Professor",
-  affiliation: "Central Agriculture University, Imphal",
-  talk: "Aquaculture Engineering, Fish Processing Technology, Food Science",
-  image: "/new.jpeg",
-  link: "https://scholar.google.com/citations?user=CCp1AWwAAAAJ&hl=en",
-},
+  {
+    name: "Dr. Sudhansu Shekhar Mahanand",
+    role: "Associate Professor",
+    affiliation: "Central Agriculture University, Imphal",
+    talk: "Aquaculture Engineering and Fish Processing Technology",
+    image: "/new.jpeg",
+    link: "https://scholar.google.com/citations?user=CCp1AWwAAAAJ&hl=en",
+  },
 
+  {
+    name: "Prof. Brijesh Srivastava",
+    role: "Professor",
+    affiliation:
+      "Department of Food Engineering & Technology, Tezpur University, Assam",
+    talk:
+      "Sustainable Food Processing Technologies for Value Addition of Agricultural Crops",
+    image: "/Prof. Brijesh Srivastava.png",
+    link: "https://www.tezu.ernet.in/",
+  },
+
+  {
+    name: "Dr. Soumya Ranjan Purohit",
+    role: "Assistant Professor",
+    affiliation: "Department of Food Engineering and Technology",
+    talk:
+      "Innovative Processing Technologies for Enhancing Nutritional Quality of Food Products",
+    image: "/DRR.png",
+    link: "https://scholar.google.com/",
+  },
+
+  {
+    name: "Dr. Vasudha Sharma",
+    role: "Assistant Professor",
+    affiliation: "Department of Food Technology, Jamia Hamdard University",
+    talk:
+      "Functional Foods and Fermentation Technologies for Future Food Systems",
+    image: "/gg.png",
+    link: "https://scholar.google.com/",
+  },
+
+  {
+    name: "Rahul Kumar",
+    role: "Assistant Professor",
+    affiliation: "Department of Food Engineering and Technology",
+    talk:
+      "Extraction and Valorisation of Bioactive Compounds for Functional Food Development",
+    image: "/Rahul Kumar.png",
+    link: "https://scholar.google.com/",
+  },
 ]
+
+/* -------------------------------- */
+/* Speakers Section */
+/* -------------------------------- */
 
 export function SpeakersSection() {
   return (
     <section id="speakers" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        
-        {/* Header Section */}
+
+        {/* Header */}
         <AnimatedSection className="mx-auto max-w-2xl text-center mb-16">
           <h2 className="text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
             Invited Speakers
           </h2>
+
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Distinguished experts from academia and industry sharing insights on 
-            innovations in food engineering and biotechnology.
+            Distinguished experts from academia and industry sharing insights on
+            innovations in food engineering, biotechnology, and automation for
+            sustainable agriculture and entrepreneurship.
           </p>
         </AnimatedSection>
 
-        {/* Speaker Grid */}
+        {/* Speakers Grid */}
         <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {speakers.map((speaker, index) => (
             <AnimatedSection key={speaker.name} delay={index * 0.1}>
               <div className="flex flex-col h-full bg-white rounded-2xl border border-gray-100 p-2 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                
-                {/* Image Container */}
+
+                {/* Image */}
                 <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-gray-100">
                   <img
                     src={speaker.image}
@@ -104,24 +151,33 @@ export function SpeakersSection() {
 
                 {/* Content */}
                 <div className="flex flex-1 flex-col p-6">
+
                   <div className="flex-1">
-                    <p className="text-sm font-medium text-blue-600 mb-1">{speaker.role}</p>
+
+                    <p className="text-sm font-medium text-blue-600 mb-1">
+                      {speaker.role}
+                    </p>
+
                     <h3 className="text-xl font-bold leading-7 tracking-tight text-gray-900">
                       {speaker.name}
                     </h3>
-                    <p className="mt-2 text-sm leading-6 text-gray-500 line-clamp-2 italic">
+
+                    <p className="mt-2 text-sm leading-6 text-gray-500 italic">
                       {speaker.affiliation}
                     </p>
-                    
+
                     <div className="mt-4 border-l-2 border-blue-100 pl-4">
-                      <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">Presentation Topic</p>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
+                        Presentation Topic
+                      </p>
+
                       <p className="mt-1 text-sm font-medium text-gray-700 leading-snug">
                         "{speaker.talk}"
                       </p>
                     </div>
                   </div>
 
-                  {/* Action Link */}
+                  {/* Button */}
                   <a
                     href={speaker.link}
                     target="_blank"
@@ -131,11 +187,13 @@ export function SpeakersSection() {
                     View Profile
                     <ExternalLink className="h-4 w-4" />
                   </a>
+
                 </div>
               </div>
             </AnimatedSection>
           ))}
         </div>
+
       </div>
     </section>
   )
